@@ -12,13 +12,14 @@ function App() {
   return (
     <Layout>
       <Header>Header</Header>
-      <Content>
-        <Route route="/" component={Login} />
-        <Route route="/signup" component={Signup} />
-        <Route route="/profile" component={Profile} />
-        <Route route="/changepassword" component={ChangePassword} />
+      <Content style={{ height: '90vh' }}>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/changepassword" component={ChangePassword} />
+        </Switch>
       </Content>
-      <Footer>Footer</Footer>
     </Layout>
   );
 }
